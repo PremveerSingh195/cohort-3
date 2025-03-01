@@ -1,7 +1,21 @@
-const fs = require("fs");
+// function runAfter3s(fn) {
+//   setTimeout(fn, 3000);
+// }
 
-const data = fs.readFileSync("a.txt", "utf8");
-const data1 = fs.readFileSync("b.txt", "utf8");
+// function print() {
+//   console.log("hello world");
+// }
 
-console.log(data, data1);
-2;
+// runAfter3s(print);
+
+function Random(resolve) {
+  setTimeout(resolve, 3000);
+}
+
+let p = new Promise(Random);
+
+function done() {
+  console.log("hello world");
+}
+
+p.then(done);
