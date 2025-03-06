@@ -1,24 +1,18 @@
-class rectangle {
+class Rectangle {
   constructor(width, height, color) {
-    this.width = width;
-    this.height = height;
-    this.color = color;
+    (this.width = width), (this.height = height), (this.color = color);
   }
-
   area() {
-    const area1 = this.width * this.height;
-    const area2 = () =>
-      console.log(`area2 ------- ${this.width + this.height}`);
-    return area1;
+    const area = this.width * this.height;
+    return area;
   }
-
   paint() {
-    console.log(`Painting with color ${this.color}`);
+    console.log(`painting with color ${this.color}`);
   }
 }
 
-const rect = new rectangle(3, 5, "red");
+const rect = new Rectangle(10, 11, "red");
 
-const now = new Date();
-
-console.log(now);
+console.log(rect.width);
+console.log(rect.area());
+rect.paint();
